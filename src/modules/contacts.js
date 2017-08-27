@@ -1,5 +1,6 @@
 import getOneContact from "./get-one-contact";
 import createContact from "./create-contact";
+import createComment from "./create-comment";
 
 function theWebRequstIsDone(response) {
   console.log("Contact response",response);
@@ -25,6 +26,7 @@ fetch("/contacts").then(function (response) {
   return response.json();
 }).then(function (data) {
   // do something with data
+  document.getElementById("numberOfContacts2").innerHTML = data.length;
   console.log(data);
 });
 
